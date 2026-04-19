@@ -30,30 +30,18 @@
         compatible = "zmk,keymap";
 
         base {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             display-name = "Base";
             bindings = <
-&lt 3 TAB        &kp Q         &kp W         &kp E           &kp R         &kp T          &kp Y      &kp U            &kp I        &kp O         &kp P            &kp BSLH
-&mt GLOBE GRAVE  &hml LSHFT A  &hml LCTRL S  &hml LALT D     &hml LGUI F   &kp G          &kp H      &hmr RGUI J      &hmr RALT K  &hmr RCTRL L  &hmr RSHFT SEMI  &kp SQT
-&kp UP_ARROW     &kp Z         &kp X         &kp C           &kp V         &kp B          &kp N      &kp M            &kp COMMA    &kp DOT       &kp FSLH         &kp DOWN_ARROW
-                                             &kp LEFT_ARROW  &lt 1 ESCAPE  &lt 2 SPACE    &lt 1 RET  &lt 2 BACKSPACE  &kp RIGHT
+&lt 3 TAB        &kp Q         &kp W         &kp E        &kp R         &kp T          &kp Y      &kp U            &kp I        &kp O         &kp P            &kp BSLH
+&mt GLOBE GRAVE  &hml LSHFT A  &hml LCTRL S  &hml LALT D  &hml LGUI F   &kp G          &kp H      &hmr RGUI J      &hmr RALT K  &hmr RCTRL L  &hmr RSHFT SEMI  &kp SQT
+&kp LEFT         &kp Z         &kp X         &kp C        &kp V         &kp B          &kp N      &kp M            &kp COMMA    &kp DOT       &kp FSLH         &kp RIGHT
+                                             &kp DOWN     &lt 1 ESCAPE  &lt 2 SPACE    &lt 1 RET  &lt 2 BACKSPACE  &kp UP
             >;
 
             label = "base";
         };
 
         num-symb {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             display-name = "num-symb";
             bindings = <
 &kp F11          &kp F1         &kp F2         &kp F3        &kp F4        &kp F5      &kp F6    &kp F7        &kp F8        &kp F9         &kp F10        &kp F12
@@ -64,12 +52,6 @@
         };
 
         sys-nav {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             display-name = "sys-nav";
             bindings = <
 &trans  &kp PAUSE_BREAK  &kp PRINTSCREEN                         &kp C_MUTE                         &kp C_VOL_DN  &kp C_VOL_UP    &trans          &mkp MB1        &mkp MB2      &mkp MB3         &trans     &trans
