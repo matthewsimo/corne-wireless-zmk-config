@@ -49,7 +49,7 @@
             bindings = <
 &kp F11          &kp F1         &kp F2         &kp F3        &kp F4        &kp F5      &kp F6    &kp F7        &kp F8        &kp F9         &kp F10        &kp F12
 &mt GLOBE MINUS  &hml LSHFT N1  &hml LCTRL N2  &hml LALT N3  &hml LGUI N4  &kp N5      &kp N6    &hmr RGUI N7  &hmr RALT N8  &hmr RCTRL N9  &hmr RSHFT N0  &kp EQUAL
-&trans           &kp PIPE       &kp LBRC       &kp LBKT      &kp LT        &kp LPAR    &kp RPAR  &kp GT        &kp RBKT      &kp RBRC       &kp BACKSLASH  &kp SLASH
+&kp HASH         &kp ASTERISK   &kp LBRC       &kp LBKT      &kp LT        &kp LPAR    &kp RPAR  &kp GT        &kp RBKT      &kp RBRC       &kp BACKSLASH  &kp SLASH
                                                &trans        &trans        &trans      &trans    &trans        &trans
             >;
         };
@@ -66,10 +66,10 @@
 
         utils {
             bindings = <
-&trans  &trans  &trans    &trans    &trans  &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3         &trans       &bt BT_CLR_ALL
-&trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT    &bt BT_PRV    &bt BT_NXT    &trans        &trans               &trans       &bt BT_CLR
-&trans  &trans  &trans    &trans    &trans  &trans       &soft_off     &trans        &trans        &kp LS(C_AL_COFFEE)  &kp C_RESET  &kp C_POWER
-                          &trans    &trans  &trans       &trans        &trans        &trans
+&trans  &trans  &trans    &trans             &trans          &trans             &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3        &bt BT_DISC 4  &bt BT_CLR_ALL
+&trans  &trans  &kp LEFT  &kp DOWN           &kp UP          &kp RIGHT          &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3         &bt BT_SEL 4   &bt BT_CLR
+&trans  &trans  &trans    &trans             &kp LEFT_BRACE  &kp RIGHT_BRACE    &trans         &trans         &trans         &kp LS(C_AL_COFFEE)  &kp C_RESET    &kp C_POWER
+                          &kp LS(LG(GRAVE))  &trans          &bt BT_PRV         &bt BT_NXT     &trans         &trans
             >;
 
             label = "utils";
