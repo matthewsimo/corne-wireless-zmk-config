@@ -1,5 +1,36 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+
+  upload:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release'
+    steps:
+      - name: Download firmware zip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh run download ${{ github.run_id }} \
+            --repo ${{ github.repository }} \
+            --name firmware \
+            --dir firmware-zip
+
+      - name: Rezip as single artifact
+        run: |
+          cd firmware-zip
+          zip -r "../firmware_${{ github.event.release.tag_name }}.zip" .
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: firmware_${{ github.event.release.tag_name }}.zip
