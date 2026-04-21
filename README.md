@@ -1,4 +1,4 @@
-# Simo's Corne ZMK Config
+# Matthew's Corne ZMK Config
 
 Here's my wireless corne zmk config. Shout out to https://nickcoutsos.github.io/keymap-editor/ to help in the customization.
 
